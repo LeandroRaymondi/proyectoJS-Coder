@@ -1,0 +1,33 @@
+body {
+  background-color: #e8e8e8; }
+
+.muestraItems {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  margin-top: 5em; }
+
+.img__carta {
+  width: 238px;
+  height: 238px; }
+
+.footer__redes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.3em;
+  margin-top: 3em; }
+
+.footer_lettersnew {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold; }
+
+.key1 {
+  width: 2em; }
+
+.key2 {
+  width: 2em; }
+
+.key3 {
+  width: 2em; }

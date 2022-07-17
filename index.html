@@ -1,13 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Document</title>
 </head>
+
 <body>
-    <script src="./JavaScript/main.js"></script>    
+    <!-- Nav -->
+    <header>
+
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">ODNails-E</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- Cuerpo -->
+
+    <section class="muestraItems">
+
+        <div class="card" style="width: 15rem; height: 28rem;">
+            <img src="./recursos/topcoat.png" class="card-img-top img__carta" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">TopCoat</h5>
+              <p class="card-text">Top coat Meliné</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" class="btn btn-primary mt-2">Agregar al carrito</a>
+            </div>
+          </div>
+    
+          <div class="card" style="width: 15rem; height: 28rem;">
+            <img src="./recursos/esmalte.png" class="card-img-top img__carta" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Esmalte</h5>
+              <p class="card-text">Esmalte Meliné</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" class="btn btn-primary mt-2">Agregar al carrito</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 15rem; height: 28rem;">
+            <img src="./recursos/torno.png" class="card-img-top img__carta" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Torno Manicura</h5>
+              <p class="card-text">Torno manicura Care</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" class="btn btn-primary mt-2">Agregar al carrito</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 15rem; height: 28rem;">
+            <img src="./recursos/cabina.png" class="card-img-top img__carta" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Cabina Manicura</h5>
+              <p class="card-text">Cabina manicura G5</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" class="btn btn-primary mt-2">Agregar al carrito</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 15rem; height: 28rem;">
+            <img src="./recursos/lima.png" class="card-img-top img__carta" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Lima</h5>
+              <p class="card-text">Lima 100/180</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" class="btn btn-primary mt-2">Agregar al carrito</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 15rem; height: 28rem;">
+            <img src="./recursos/repujador.png" class="card-img-top img__carta" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Repujador</h5>
+              <p class="card-text">Repujador de Metal</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" class="btn btn-primary mt-2">Agregar al carrito</a>
+            </div>
+          </div>
+
+    </section>
+    <!-- Footer -->
+    <footer class="footer__redes">
+
+        <p class="footer_lettersnew">Todos los derechos reservados</p>
+        <div class="footer__redes__logos">
+            <a href="https://youtu.be/SAj01fYE4yg"><img class="key1" src="./recursos/redes/twitter-png.png"
+                    alt="Logo Twitter" /></a>
+            <a href="https://youtu.be/SAj01fYE4yg"><img class="key2" src="./recursos/redes/facebook-png.png"
+                    alt="Logo Facebook" /></a>
+            <a href="https://youtu.be/SAj01fYE4yg"><img class="key3" src="./recursos/redes/instragram-png.png"
+                    alt="Logo Instagram" /></a>
+
+    </footer>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="./JavaScript/main.js"></script>
 </body>
+
 </html>
