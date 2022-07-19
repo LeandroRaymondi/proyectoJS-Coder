@@ -72,8 +72,10 @@ const filterPrecio = () => {
 
 // ELIMINAR PRODUCTOS
 
-const eliminarProducto = () => {
+// Esto es algo que me tiene trabado hace bastante jajaja
+
+/* const eliminarProducto = () => {
     let producto = prompt("¿Qué elemento quieres eliminar?");
     let search = listaProductos.find(elemento => elemento.nombre == search);
 
-}
+} */
