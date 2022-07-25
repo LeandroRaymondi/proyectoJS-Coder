@@ -4,29 +4,23 @@ class Productos {
     constructor(nombre, categoria, precio, stock){
         this.nombre = nombre;
         this.categoria = categoria;
-        this.precio = parseFloat(precio);
-        this.stock = parseInt(stock);
+        this.precio = (precio);
+        this.stock = (stock);
     }
+
     comprar(cantidad) {
-
         if (this.stock >= cantidad) {
-
             this.stock = this.stock - cantidad;
-
             console.log(`quedan ${this.stock}`)
         }else{
-
             alert(`No tenemos esa cantidad de stock, quedan ${this.stock}`)
-
         }
-
         return this.stock;
-
     }
+
     cargarStock(cantidad) {
-
         this.stock = this.stock + cantidad;
-
+        //Agregar un return de true or false, para tener respuesta de la función y ver si se cargó bien el stock
     }
 }
 
@@ -43,13 +37,15 @@ const agregarProducto = () => {
     let nombre = prompt("¿Cuál es el nombre del producto?");
     let categoria = prompt("¿De qué categoría es el producto?");
     let precio = parseFloat(prompt("¿Cuál es el precio que quieres asignarle a tu producto?"));
-    let stock = prompt("¿Cuántos productos del mismo quieres vender?");
-    
-    let nuevoProducto = new Productos(nombre, categoria, precio, stock);
-    listaProductos.push(nuevoProducto);
-    console.log(nuevoProducto);
+    let stock = parseInt(prompt("¿Cuántos productos del mismo quieres vender?"));
+    if ((typeof precio === 'number') && ( typeof stock === 'number')){
+            let nuevoProducto = new Productos(nombre, categoria, precio, stock);
+            listaProductos.push(nuevoProducto);
+            console.log(listaProductos);
+    } else {
+        alert(`Los datos ingresados no son números. Vuelve a ingresarlos.`)
+    }
 }
-
 
 // LISTA DE STOCK + IVA
 const stockIva = listaProductos.map((producto) => {return {
@@ -61,6 +57,7 @@ const stockIva = listaProductos.map((producto) => {return {
     )
 
 // FILTRO PRECIOS
+let menorMayor = document.querySelector(".filterPrecio");
 
 const filterPrecio = () => {
     let filterUsuario = parseFloat(prompt("¿Hasta que precio quieres buscar?"));
@@ -70,12 +67,17 @@ const filterPrecio = () => {
     }else console.log(`No se ha encontrado productos en ese rango de precio.`)
 }
 
+menorMayor.addEventListener("click", filterPrecio);
+
+//Cambiar titulo
+let cambiarTitulo = document.querySelector(".cambiarTitulo");
+
+cambiarTitulo.addEventListener("click", () => {
+    let titulo = document.querySelector(".titulo");
+    titulo.innerHTML = (prompt("¿Cuál es el título que quieres colocar?"))
+    return titulo.innerText
+})
+
 // ELIMINAR PRODUCTOS
 
-// Esto es algo que me tiene trabado hace bastante jajaja
-
-/* const eliminarProducto = () => {
-    let producto = prompt("¿Qué elemento quieres eliminar?");
-    let search = listaProductos.find(elemento => elemento.nombre == search);
-
-} */
+// Buscar la manera de hacer esta funcion, filter, find y recortar el index, etc.
