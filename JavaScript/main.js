@@ -133,30 +133,6 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
     shoppingCartItemsContainer.append(shoppingCartRow);
 }
 
-function updateShoppingCartTotal() {
-    let total = 0;
-    const shoppingCartTotal = document.querySelector('.shoppingCartTotal');
-
-    const shoppingCartItems = document.querySelectorAll('.shoppingCartItem');
-
-    shoppingCartItems.forEach((shoppingCartItem) => {
-        const shoppingCartItemPriceElement = shoppingCartItem.querySelector(
-            '.shoppingCartItemPrice'
-        );
-        const shoppingCartItemPrice = Number(
-            shoppingCartItemPriceElement.textContent.replace('€', '')
-        );
-        const shoppingCartItemQuantityElement = shoppingCartItem.querySelector(
-            '.shoppingCartItemQuantity'
-        );
-        const shoppingCartItemQuantity = Number(
-            shoppingCartItemQuantityElement.value
-        );
-        total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
-    });
-    shoppingCartTotal.innerHTML = `${total.toFixed(2)}€`;
-}
-
 function comprarButtonClicked() {
     shoppingCartItemsContainer.innerHTML = '';
     updateShoppingCartTotal();
