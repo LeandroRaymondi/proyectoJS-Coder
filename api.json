@@ -1,0 +1,50 @@
+[
+    {
+        "id":1,
+        "nombre": "Top Coat",
+        "categoria": "Esmaltes",
+        "precio": 1200,
+        "stock": 10,
+        "thumbnailUrl": "https://ibb.co/1qHXs30"
+    },
+    {
+        "id": 2,
+        "nombre": "Esmalte",
+        "categoria": "Esmaltes",
+        "precio": 890,
+        "stock": 35,
+        "thumbnailUrl": "https://ibb.co/7Wg8WgJ"
+    },
+    {
+        "id":3,
+        "nombre": "Torno",
+        "categoria": "Tornos",
+        "precio": 11999,
+        "stock": 10,
+        "thumbnailUrl": "https://ibb.co/6w4HkMM"
+    },
+    {
+        "id":4,
+        "nombre": "Cabina",
+        "categoria": "Cabinas",
+        "precio": 4500,
+        "stock": 10,
+        "thumbnailUrl": "https://ibb.co/rMdG5hT"
+    },
+    {
+        "id":5,
+        "nombre": "Lima",
+        "categoria": "Limas",
+        "precio": 100,
+        "stock": 50,
+        "thumbnailUrl": "https://ibb.co/dQK2mzX"
+    },
+    {
+        "id":6,
+        "nombre": "Repujador",
+        "categoria": "Repujadores",
+        "precio": 150,
+        "stock": 15,
+        "thumbnailUrl": "https://ibb.co/PmPmDWq"
+    }
+]
