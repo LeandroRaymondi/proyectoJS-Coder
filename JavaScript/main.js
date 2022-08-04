@@ -26,7 +26,7 @@ class Productos {
 
 const listaProductos = [
     { nombre: "topcoat", categoria: "esmaltes", precio: 1200, stock: 10 },
-    { nombre: "esmalte", categoria: "esmaltes", precio: 890, stock: 35 },
+    { nombre: "esmalte meline", categoria: "esmaltes", precio: 890, stock: 35 },
     { nombre: "torno", categoria: "manicura", precio: 11999, stock: 10 },
     { nombre: "cabina", categoria: "manicura", precio: 4500, stock: 10 },
     { nombre: "lima", categoria: "manicura", precio: 100, stock: 50 },
@@ -71,7 +71,7 @@ const filterPrecio = () => {
 
 menorMayor.addEventListener("click", filterPrecio);
 
-//Cambiar titulo
+//CAMBIAR TITULO
 let cambiarTitulo = document.querySelector(".cambiarTitulo");
 
 cambiarTitulo.addEventListener("click", () => {
@@ -80,7 +80,7 @@ cambiarTitulo.addEventListener("click", () => {
     return titulo.innerText
 })
 
-//Carrito 1.0
+//CARRITO 1.0
 
 const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
 addToShoppingCartButtons.forEach((addToCartButton) => {
@@ -106,26 +106,9 @@ function addToCartClicked(event) {
 }
 
 function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
-    const elementsTitle = shoppingCartItemsContainer.getElementsByClassName(
-        'shoppingCartItemTitle'
-    );
-    for (let i = 0; i < elementsTitle.length; i++) {
-        if (elementsTitle[i].innerText === itemTitle) {
-            let elementQuantity = elementsTitle[
-                i
-            ].parentElement.parentElement.parentElement.querySelector(
-                '.shoppingCartItemQuantity'
-            );
-            elementQuantity.value++;
-            $('.toast').toast('show');
-            updateShoppingCartTotal();
-            return;
-        }
-    }
-
     const shoppingCartRow = document.createElement('div');
     const shoppingCartContent = `
-  <div class="row shoppingCartItem">
+    <div class="row shoppingCartItem">
         <div class="col-6">
             <div class="shopping-cart-item d-flex align-items-center h-100 border-bottom pb-2 pt-3">
                 <img src=${itemImage} class="shopping-cart-image">
@@ -148,16 +131,6 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
     </div>`;
     shoppingCartRow.innerHTML = shoppingCartContent;
     shoppingCartItemsContainer.append(shoppingCartRow);
-
-    shoppingCartRow
-        .querySelector('.buttonDelete')
-        .addEventListener('click', removeShoppingCartItem);
-
-    shoppingCartRow
-        .querySelector('.shoppingCartItemQuantity')
-        .addEventListener('change', quantityChanged);
-
-    updateShoppingCartTotal();
 }
 
 function updateShoppingCartTotal() {
@@ -182,18 +155,6 @@ function updateShoppingCartTotal() {
         total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
     });
     shoppingCartTotal.innerHTML = `${total.toFixed(2)}€`;
-}
-
-function removeShoppingCartItem(event) {
-    const buttonClicked = event.target;
-    buttonClicked.closest('.shoppingCartItem').remove();
-    updateShoppingCartTotal();
-}
-
-function quantityChanged(event) {
-    const input = event.target;
-    input.value <= 0 ? (input.value = 1) : null;
-    updateShoppingCartTotal();
 }
 
 function comprarButtonClicked() {
