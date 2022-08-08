@@ -5,7 +5,7 @@
         "categoria": "Esmaltes",
         "precio": 1200,
         "stock": 10,
-        "thumbnailUrl": "https://ibb.co/1qHXs30"
+        "thumbnaiUrl": "https://i.ibb.co/9TR4wJp/topcoat.png"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "categoria": "Esmaltes",
         "precio": 890,
         "stock": 35,
-        "thumbnailUrl": "https://ibb.co/7Wg8WgJ"
+        "thumbnaiUrl": "https://i.ibb.co/6PvVPvR/esmalte.png"
     },
     {
         "id":3,
@@ -21,7 +21,7 @@
         "categoria": "Tornos",
         "precio": 11999,
         "stock": 10,
-        "thumbnailUrl": "https://ibb.co/6w4HkMM"
+        "thumbnaiUrl": "https://i.ibb.co/LRCx3FF/torno.png"
     },
     {
         "id":4,
@@ -29,7 +29,7 @@
         "categoria": "Cabinas",
         "precio": 4500,
         "stock": 10,
-        "thumbnailUrl": "https://ibb.co/rMdG5hT"
+        "thumbnaiUrl": "https://i.ibb.co/jGJv3YB/cabina.png"
     },
     {
         "id":5,
@@ -37,7 +37,7 @@
         "categoria": "Limas",
         "precio": 100,
         "stock": 50,
-        "thumbnailUrl": "https://ibb.co/dQK2mzX"
+        "thumbnaiUrl": "https://i.ibb.co/GVP2HbG/lima.png"
     },
     {
         "id":6,
@@ -45,6 +45,6 @@
         "categoria": "Repujadores",
         "precio": 150,
         "stock": 15,
-        "thumbnailUrl": "https://ibb.co/PmPmDWq"
+        "thumbnaiUrl": "https://i.ibb.co/cgZgY84/repujador.png"
     }
 ]
