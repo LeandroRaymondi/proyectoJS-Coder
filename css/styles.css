@@ -23,6 +23,18 @@ body {
 .card-category {
   font-size: 0.8em; }
 
+.footer__redes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.3em;
+  margin-top: 9em; }
+
+.footer_lettersnew {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold; }
+
 .key1 {
   width: 2em; }
 
