@@ -93,15 +93,15 @@ let carrito = {};
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchData();
-    if(localStorage.getItem("carrito")) {
+    if (localStorage.getItem("carrito")) {
         carrito = JSON.parse(localStorage.getItem("carrito"));
         pintarCarrito();
     }
 })
 
-cards.addEventListener("click", e => {addCarrito(e);});
+cards.addEventListener("click", e => { addCarrito(e); });
 
-items.addEventListener("click", e => {btnAccion(e);});
+items.addEventListener("click", e => { btnAccion(e); });
 
 // Get Products
 const fetchData = async () => {
@@ -143,11 +143,11 @@ const setCarrito = objeto => {
         precio: objeto.querySelector(".card-price").textContent,
         cantidad: 1
     }
-    
+
     if (carrito.hasOwnProperty(producto.id)) {
         producto.cantidad = carrito[producto.id].cantidad + 1;
     }
-    carrito[producto.id] = {...producto};
+    carrito[producto.id] = { ...producto };
     pintarCarrito();
 }
 
@@ -176,12 +176,12 @@ const pintarFooter = () => {
         footer.innerHTML = `
         <th scope="row" colspan="5">Carrito Vacío</th>
         `
-        return 
+        return
     };
 
-    const nCantidad = Object.values(carrito).reduce((acc, {cantidad}) => acc + cantidad, 0) 
-    const nPrecio = Object.values(carrito).reduce((acc, {cantidad, precio}) => acc + cantidad * precio, 0)
-    
+    const nCantidad = Object.values(carrito).reduce((acc, { cantidad }) => acc + cantidad, 0)
+    const nPrecio = Object.values(carrito).reduce((acc, { cantidad, precio }) => acc + cantidad * precio, 0)
+
     templateFooter.querySelectorAll("td")[0].textContent = nCantidad;
     templateFooter.querySelector("span").textContent = nPrecio;
 
@@ -191,6 +191,15 @@ const pintarFooter = () => {
 
     const btnVaciar = document.getElementById("vaciar-carrito");
     btnVaciar.addEventListener("click", () => {
+        
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: '¡El carrito ha sido vaciado!',
+            showConfirmButton: false,
+            timer: 1500
+        })
+
         carrito = {};
         pintarCarrito();
     })
@@ -203,19 +212,35 @@ const btnAccion = e => {
         const producto = carrito[e.target.dataset.id];
 
         producto.cantidad = carrito[e.target.dataset.id].cantidad + 1;
-        carrito[e.target.dataset.id] = {...producto};
+        carrito[e.target.dataset.id] = { ...producto };
 
         pintarCarrito();
+
+        Toastify({
+            text: `Se añadió un ${producto.title} mas al carrito`,
+            duration: 1500,
+            style: {background:"#e8e8e8", color:"black"},
+            close: true
+        }).showToast();
     }
 
     if (e.target.classList.contains("btn-danger")) {
+
         const producto = carrito[e.target.dataset.id];
         producto.cantidad--;
 
-        if(producto.cantidad === 0) {
+        if (producto.cantidad === 0) {
             delete carrito[e.target.dataset.id]
         }
+
         pintarCarrito();
-    }
+
+        Toastify({
+            text: `Se eliminó un ${producto.title} del carrito`,
+            duration: 1500,
+            style: {background:"#e8e8e8", color:"black"},
+            onClick: () => {close: true}
+        }).showToast();
+    
     e.stopPropagation();
-}
+}}
