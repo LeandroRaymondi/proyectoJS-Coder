@@ -20,27 +20,11 @@
   <!-- NAV-->
 
   <header>
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg index__header">
+      <div class="container-fluid justify-content-center">
         <a class="navbar-brand titulo" href="index.html">ODNails-E</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
+        
+      </div>
       </div>
     </nav>
   </header>
@@ -49,17 +33,16 @@
 
   <section>
     <div class="index__Menu">
+      <input type="text" class="search_box" value="" id="testeo" placeholder="Buscar Item">
       <button type="button" class="btn btn-primary index__buttoms addProduct">Agregar producto</button>
-      <button type="button" class="btn btn-primary index__buttoms filterPrecio">Filtrar por Precio</button>
-      <div>
-        <input type="text" class="search_box" value="" id="testeo">
-      </div>
-      <button type="button" class="btn btn-primary index__buttoms cambiarTitulo">Cambiar Titulo</button>
     </div>
   </section>
 
-  <!-- STORE -->
+  <section class="container">
+    <div class="row" id="cards"></div>
+  </section>
 
+  <!-- Modal -->
   <div class="container">
     <h1>Carrito</h1>
     <hr>
@@ -81,9 +64,10 @@
         </tr>
       </tfoot>
     </table>
-    <div class="row" id="cards"></div>
 
   </div>
+
+
 
   <template id="template-carrito">
     <tr>
@@ -102,6 +86,8 @@
     </tr>
   </template>
 
+
+
   <template id="template-footer">
     <th scope="row" colspan="2">Total productos</th>
     <td>10</td>
@@ -113,8 +99,10 @@
     <td class="font-weight-bold">$ <span>5000</span></td>
   </template>
 
+
+
   <template id="template-card">
-    <div class="col-12 b-2 col-md-4">
+    <div class="col mt-3 mb-3">
       <div class="card text-center align-items-center">
         <div class="card-body m-1">
           <img class="card-img-top" src="" alt=""></img>
@@ -127,6 +115,7 @@
       </div>
     </div>
   </template>
+
 
   <!-- FOOTER -->
 

@@ -46,5 +46,54 @@
         "precio": 150,
         "stock": 15,
         "thumbnaiUrl": "https://i.ibb.co/cgZgY84/repujador.png"
+    },
+    {
+        "id": 7,
+        "nombre": "Pincel",
+        "categoria": "Pinceles",
+        "precio": 350,
+        "stock": 35,
+        "thumbnaiUrl": "https://i.ibb.co/Y3mjnzT/pincel.png"
+        
+    },
+    {
+        "id":6,
+        "nombre": "Gel de Construccion",
+        "categoria": "Geles",
+        "precio": 1800,
+        "stock": 25,
+        "thumbnaiUrl": "https://i.ibb.co/WH3M0db/gel-de-construccion.png"
+    },
+    {
+        "id":6,
+        "nombre": "Ultrabond",
+        "categoria": "Esmaltes",
+        "precio": 1200,
+        "stock": 10,
+        "thumbnaiUrl": "https://i.ibb.co/pytB3Dk/ultrabond.webp"
+    },
+    {
+        "id":6,
+        "nombre": "Wipes",
+        "categoria": "Wipes",
+        "precio": 600,
+        "stock": 15,
+        "thumbnaiUrl": "https://i.ibb.co/8gTFnjY/wipes.webp"
+    },
+    {
+        "id":6,
+        "nombre": "Papel Plata",
+        "categoria": "Aplicables",
+        "precio": 500,
+        "stock": 15,
+        "thumbnaiUrl": "https://i.ibb.co/FWwm1QY/papel-plata.png"
+    },
+    {
+        "id":6,
+        "nombre": "Papel Oro",
+        "categoria": "Aplicables",
+        "precio": 500,
+        "stock": 15,
+        "thumbnaiUrl": "https://i.ibb.co/5jKhQ81/papel-oro.png"
     }
 ]

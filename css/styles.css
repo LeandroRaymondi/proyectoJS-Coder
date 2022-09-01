@@ -1,17 +1,38 @@
+* {
+  margin: 0;
+  padding: 0; }
+
 body {
-  background-color: #e8e8e8; }
+  background-image: linear-gradient(#e2e1d9, #93c4ef); }
+
+.index__header {
+  height: 6em;
+  background-image: linear-gradient(#77cbe3, #e2e1d9);
+  border-bottom: 2.5px solid #88856820; }
 
 .index__Menu {
   display: flex;
   justify-content: center;
-  margin-top: 2.5em; }
+  align-items: center;
+  margin-top: 2.5em;
+  padding-left: 1em; }
+
+.search_box {
+  width: 20em;
+  height: 2em; }
 
 .index__buttoms {
-  margin: 1em; }
+  margin: 1em;
+  background-color: #77cbe3;
+  border: 1px solid #6eafc2;
+  color: black; }
 
 /* Store */
 .card {
-  width: 225px; }
+  background-image: linear-gradient(#77cbe3, #e2e1d9);
+  box-shadow: 6px 6px 4px 1px rgba(60, 159, 171, 0.75);
+  -webkit-box-shadow: 6px 6px 4px 1px rgba(60, 159, 171, 0.75);
+  -moz-box-shadow: 6px 6px 4px 1px rgba(60, 159, 171, 0.75); }
 
 .card-img-top {
   width: 200px;
@@ -19,9 +40,6 @@ body {
 
 .card-title {
   font-size: 1.2em; }
-
-.card-category {
-  font-size: 0.8em; }
 
 .footer__redes {
   display: flex;
