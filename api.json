@@ -57,7 +57,7 @@
         
     },
     {
-        "id":6,
+        "id":8,
         "nombre": "Gel de Construccion",
         "categoria": "Geles",
         "precio": 1800,
@@ -65,7 +65,7 @@
         "thumbnaiUrl": "https://i.ibb.co/WH3M0db/gel-de-construccion.png"
     },
     {
-        "id":6,
+        "id":9,
         "nombre": "Ultrabond",
         "categoria": "Esmaltes",
         "precio": 1200,
@@ -73,7 +73,7 @@
         "thumbnaiUrl": "https://i.ibb.co/pytB3Dk/ultrabond.webp"
     },
     {
-        "id":6,
+        "id":10,
         "nombre": "Wipes",
         "categoria": "Wipes",
         "precio": 600,
@@ -81,7 +81,7 @@
         "thumbnaiUrl": "https://i.ibb.co/8gTFnjY/wipes.webp"
     },
     {
-        "id":6,
+        "id":11,
         "nombre": "Papel Plata",
         "categoria": "Aplicables",
         "precio": 500,
@@ -89,7 +89,7 @@
         "thumbnaiUrl": "https://i.ibb.co/FWwm1QY/papel-plata.png"
     },
     {
-        "id":6,
+        "id":12,
         "nombre": "Papel Oro",
         "categoria": "Aplicables",
         "precio": 500,
