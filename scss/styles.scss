@@ -3,27 +3,46 @@
     padding: 0;
 }
 
+@import 'variables';
+@import 'cards';
+@import 'footer';
+
 body {
-    background-image: linear-gradient(#e2e1d9, #93c4ef);
+    background-image: linear-gradient($color-primary, $color-secondary);
 }
 
 .position_up {
     position: absolute;
-    top: 2em;
-    right: 1em;
+    top: 1.1em;
+    right: 13em;
+    padding-right: 5em;
 
     button {
         margin-right: 0.5em;
     }
 }
 
-.index__header {
-    height: 6em;
-    background-image: linear-gradient(#77cbe3, #e2e1d9);
-    border-bottom: 2.5px solid #88856820;
+.btn-car {
+    background-color: $color-secondary;
+    border: 1px solid $color-shadow;
+    color: black;
+    &:hover {
+        color: black;
+        background-color: $color-secondary;
+        border: 1px solid $color-shadow;
+        transform: $hover-scale;
+    }
 }
 
-.index__Menu {
+.index__nav {
+    height: 5em;
+    background-image: linear-gradient($color-secondary, $color-primary);
+    box-shadow: 0px 6px 5px 0px $color-shadow;
+    -webkit-box-shadow: 0px 6px 5px 0px $color-shadow;
+    -moz-box-shadow: 0px 6px 5px 0px $color-shadow;
+}
+
+.main__options {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,64 +50,15 @@ body {
     padding-left: 1em;
 }
 
-.search_box {
-    width: 20em;
-    height: 2em;
-}
-
-.index__buttoms {
+.search__box {
     margin: 1em;
-    background-color: #77cbe3;
-    border: 1px solid #6eafc2;
-    color: black;
+    width: 20em;
+    height: 2.375em;
+}
+
+.addProduct {
+    @extend .btn-car;
 }
 
 
-/* Store */
 
-.card {
-    background-image: linear-gradient(#77cbe3, #e2e1d9);
-    box-shadow: 6px 6px 4px 1px rgba(60, 159, 171, 0.75);
-    -webkit-box-shadow: 6px 6px 4px 1px rgba(60, 159, 171, 0.75);
-    -moz-box-shadow: 6px 6px 4px 1px rgba(60, 159, 171, 0.75);
-}
-
-.card-img-top {
-    width: 200px;
-    height: 200px;
-}
-
-.card-title {
-    font-size: 1.2em;
-}
-
-
-//Footer
-
-.footer__redes {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0.3em;
-    margin-top: 9em;
-}
-
-.footer_lettersnew {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-
-}
-
-$logos: (
-    key1: twitter,
-    key2: facebook,
-    key3: instagram
-);
-
-@each $key,
-$redes in $logos {
-    .#{$key} {
-        width: 2em;
-    }
-}

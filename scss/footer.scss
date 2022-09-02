@@ -1,0 +1,29 @@
+
+.footer__redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.3em;
+    margin-top: 9em;
+    background-image: linear-gradient($color-secondary,$color-primary);
+}
+
+.footer_lettersnew {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
+
+$logos: (
+    key1: twitter,
+    key2: facebook,
+    key3: instagram
+);
+
+@each $key,
+$redes in $logos {
+    .#{$key} {
+        width: 2em;
+    }
+}

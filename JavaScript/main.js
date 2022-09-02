@@ -121,6 +121,13 @@ const setCarrito = objeto => {
     }
     carrito[producto.id] = { ...producto };
     pintarCarrito();
+
+    Toastify({
+        text: `Se añadió ${producto.title} al carrito`,
+        duration: 1500,
+        style: { background: "#93c4ef", color: "black" },
+        close: true
+    }).showToast();
 }
 
 const pintarCarrito = () => {
@@ -191,7 +198,7 @@ const btnAccion = e => {
         Toastify({
             text: `Se añadió un ${producto.title} mas al carrito`,
             duration: 1500,
-            style: { background: "#e8e8e8", color: "black" },
+            style: { background: "#93c4ef", color: "black" },
             close: true
         }).showToast();
     }
@@ -210,7 +217,7 @@ const btnAccion = e => {
         Toastify({
             text: `Se eliminó un ${producto.title} del carrito`,
             duration: 1500,
-            style: { background: "#e8e8e8", color: "black" },
+            style: { background: "#93c4ef", color: "black" },
         }).showToast();
 
         e.stopPropagation();

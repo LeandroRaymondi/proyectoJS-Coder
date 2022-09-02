@@ -2,41 +2,8 @@
   margin: 0;
   padding: 0; }
 
-body {
-  background-image: linear-gradient(#e2e1d9, #93c4ef); }
-
-.position_up {
-  position: absolute;
-  top: 2em;
-  right: 1em; }
-  .position_up button {
-    margin-right: 0.5em; }
-
-.index__header {
-  height: 6em;
-  background-image: linear-gradient(#77cbe3, #e2e1d9);
-  border-bottom: 2.5px solid #88856820; }
-
-.index__Menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2.5em;
-  padding-left: 1em; }
-
-.search_box {
-  width: 20em;
-  height: 2em; }
-
-.index__buttoms {
-  margin: 1em;
-  background-color: #77cbe3;
-  border: 1px solid #6eafc2;
-  color: black; }
-
-/* Store */
 .card {
-  background-image: linear-gradient(#77cbe3, #e2e1d9);
+  background-image: linear-gradient(#93c4ef, #e2e1d9);
   box-shadow: 6px 6px 4px 1px rgba(60, 159, 171, 0.75);
   -webkit-box-shadow: 6px 6px 4px 1px rgba(60, 159, 171, 0.75);
   -moz-box-shadow: 6px 6px 4px 1px rgba(60, 159, 171, 0.75); }
@@ -54,7 +21,8 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 0.3em;
-  margin-top: 9em; }
+  margin-top: 9em;
+  background-image: linear-gradient(#93c4ef, #e2e1d9); }
 
 .footer_lettersnew {
   font-family: Arial, Helvetica, sans-serif;
@@ -68,3 +36,43 @@ body {
 
 .key3 {
   width: 2em; }
+
+body {
+  background-image: linear-gradient(#e2e1d9, #93c4ef); }
+
+.position_up {
+  position: absolute;
+  top: 1.1em;
+  right: 13em;
+  padding-right: 5em; }
+  .position_up button {
+    margin-right: 0.5em; }
+
+.btn-car, .card-btn, .addProduct {
+  background-color: #93c4ef;
+  border: 1px solid rgba(60, 159, 171, 0.75);
+  color: black; }
+  .btn-car:hover, .card-btn:hover, .addProduct:hover {
+    color: black;
+    background-color: #93c4ef;
+    border: 1px solid rgba(60, 159, 171, 0.75);
+    transform: scale(1.1); }
+
+.index__nav {
+  height: 5em;
+  background-image: linear-gradient(#93c4ef, #e2e1d9);
+  box-shadow: 0px 6px 5px 0px rgba(60, 159, 171, 0.75);
+  -webkit-box-shadow: 0px 6px 5px 0px rgba(60, 159, 171, 0.75);
+  -moz-box-shadow: 0px 6px 5px 0px rgba(60, 159, 171, 0.75); }
+
+.main__options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5em;
+  padding-left: 1em; }
+
+.search__box {
+  margin: 1em;
+  width: 20em;
+  height: 2.375em; }
