@@ -1,58 +1,3 @@
-// ADICIONAR NUEVO PRODUCTO
-
-// Crear la función agregarProducto que mediante los promps obtenga el nombre, categoria, precio, stock 
-// y que el ID se haga haciendo una lectura de api.JSON y sumandole ++ (uno) al máximo ID registrado,
-// la función de agregarProducto además tiene que volver a pintar las cartas de productos en el index, obviamente agregando el nuevo producto ingresado
-// esta función además va a tener otra función adentro que va a escribir el nuevo objeto creado dentro de api.JSON
-class Productos {
-    constructor(id, nombre, categoria, precio, stock, thumbnaiUrl) {
-        this.id = (id);
-        this.nombre = (nombre);
-        this.categoria = (categoria);
-        this.precio = (precio);
-        this.stock = (stock);
-        this.thumbnaiUrl = (thumbnaiUrl);
-    }
-
-    comprar(cantidad) {
-        if (this.stock >= cantidad) {
-            this.stock = this.stock - cantidad;
-            console.log(`quedan ${this.stock}`)
-        } else {
-            alert(`No tenemos esa cantidad de stock, quedan ${this.stock}`);
-        }
-        return this.stock;
-    }
-}
-
-const addProduct = document.querySelector(".addProduct");
-
-const agregarProducto = (data) => {
-    let id = 7 ;
-    let nombre = prompt("¿Cuál es el nombre del producto?");
-    let categoria = prompt("¿De qué categoría es el producto?");
-    let precio = parseFloat(prompt("¿Cuál es el precio que quieres asignarle a tu producto?"));
-    let stock = parseInt(prompt("¿Cuántos productos del mismo quieres vender?"));
-
-    if ((typeof precio === 'number') && (typeof stock === 'number')) {
-        let nuevoProducto = new Productos(id, nombre, categoria, precio, stock, thumbnaiUrl);
-        fetch ("api.json", {
-            method: "POST",
-            headers: {'content-type':'application/json; charset=UTF-8'},
-            body: JSON.stringify(nuevoProducto)
-        })
-        .then(JSON.stringify(nuevoProducto))
-    } else {
-        alert(`Los datos ingresados no son números. Vuelve a ingresarlos.`);
-    }
-}
-
-addProduct.addEventListener("click", () => {
-    agregarProducto();
-});
-
-//CARRITO 1.0
-
 const cards = document.getElementById("cards");
 const items = document.getElementById("items");
 const footer = document.getElementById("footer");
@@ -60,6 +5,9 @@ const templateCard = document.getElementById("template-card").content;
 const templateFooter = document.getElementById("template-footer").content;
 const templateCarrito = document.getElementById("template-carrito").content;
 const fragment = document.createDocumentFragment();
+const buy = document.getElementById("buy");
+let menorMayor = document.getElementById("testeo");
+let fillData = {}
 let carrito = {};
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -224,10 +172,20 @@ const btnAccion = e => {
     }
 }
 
-// FILTRO PRECIOS
-let menorMayor = document.querySelector(".search_box");
-let fillData = {}
+// Buy
+buy.addEventListener("click", () => {
+    carrito = {};
+    pintarCarrito();
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: '¡Su compra se ha realizado con exito!',
+        showConfirmButton: false,
+        timer: 2000
+    })
+})
 
+// Price Filter
 const filterPrecio = (data, palabra) => {
     fillData = Array.from(data.filter(word => word.nombre.toLowerCase().indexOf(palabra) > -1));
 }
